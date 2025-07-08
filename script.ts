@@ -75,7 +75,7 @@ class PersonalWebsite {
     private experiences: Experience[] = [
         {
             title: 'Lead Quality Assurance Tester',
-            company: 'Ahladiya Muslim Community',
+            company: 'Ahmadiya Muslim Community',
             location: 'Silver Spring, Maryland, United States',
             period: 'Jun 2025 -- Present',
             description: [

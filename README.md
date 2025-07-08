@@ -106,7 +106,7 @@ npm run dev
 ## Key Highlights
 
 - **GPA**: 3.88/4.00 at George Mason University
-- **Current Role**: Lead Quality Assurance Tester at Ahladiya Muslim Community (2025-Present)
+- **Current Role**: Lead Quality Assurance Tester at Ahmadiya Muslim Community (2025-Present)
 - **Experience**: Software Engineering Intern at MapLarge (2025)
 - **Research**: Undergraduate Researcher focusing on AI ethics and governance
 - **Teaching**: Outstanding Teaching Assistant Award recipient
