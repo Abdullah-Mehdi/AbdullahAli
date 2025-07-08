@@ -1,0 +1,34 @@
+{
+  "name": "abdullah-ali-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Abdullah Ali - Software Engineering Student",
+  "main": "index.html",
+  "scripts": {
+    "build": "tsc script.ts --target ES2020 --lib ES2020,DOM",
+    "dev": "python -m http.server 8000",
+    "watch": "tsc script.ts --target ES2020 --lib ES2020,DOM --watch"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "typescript",
+    "personal-website",
+    "full-stack"
+  ],
+  "author": "Abdullah Ali <abdullahmehdiemail@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdullah-Mehdi/portfolio"
+  },
+  "homepage": "https://abdullah-mehdi.github.io/portfolio",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

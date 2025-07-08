@@ -1,0 +1,377 @@
+interface ContactInfo {
+    icon: string;
+    text: string;
+    href?: string;
+}
+
+interface SocialLink {
+    icon: string;
+    href: string;
+    label: string;
+}
+
+interface Education {
+    institution: string;
+    degree: string;
+    location: string;
+    period: string;
+    gpa: string;
+    honors: string[];
+}
+
+interface Experience {
+    title: string;
+    company: string;
+    location: string;
+    period: string;
+    description: string[];
+}
+
+interface Project {
+    title: string;
+    description: string;
+    technologies: string[];
+    githubUrl?: string;
+    liveUrl?: string;
+    period: string;
+}
+
+interface Award {
+    title: string;
+    organization: string;
+    date: string;
+}
+
+interface SkillCategory {
+    title: string;
+    skills: string[];
+}
+
+class PersonalWebsite {
+    private contactInfo: ContactInfo[] = [
+        { icon: '📍', text: 'Tysons, VA' },
+        { icon: '📞', text: '570-397-0319', href: 'tel:+15703970319' },
+        { icon: '🇺🇸', text: 'U.S. Citizen' },
+        { icon: '✉️', text: 'abdullahmehdiemail@gmail.com', href: 'mailto:abdullahmehdiemail@gmail.com' }
+    ];
+
+    private socialLinks: SocialLink[] = [
+        { icon: 'LinkedIn', href: 'https://www.linkedin.com/in/abdullah-ali-100127300/', label: 'LinkedIn' },
+        { icon: 'GitHub', href: 'https://github.com/Abdullah-Mehdi', label: 'GitHub' }
+    ];
+
+    private education: Education = {
+        institution: 'George Mason University',
+        degree: 'Bachelor of Science in Applied Computer Science, Software Engineering Concentration',
+        location: 'Fairfax, VA',
+        period: 'Expected Dec. 2025',
+        gpa: '3.88/4.00',
+        honors: [
+            'Dean\'s List (Fall 2023, Spring 2024, Fall 2024, Spring 2025)',
+            'Phi Kappa Phi Honors Society'
+        ]
+    };
+
+    private experiences: Experience[] = [
+        {
+            title: 'Lead Quality Assurance Tester',
+            company: 'Ahladiya Muslim Community',
+            location: 'Silver Spring, Maryland, United States',
+            period: 'Jun 2025 -- Present',
+            description: [
+                'As Lead Quality Assurance Tester, I direct the end-to-end testing strategy for a portfolio of 4 digital products (3 mobile apps and 1 web platform).',
+                'Lead a dedicated QA team, architect comprehensive test plans in QMetry for iOS and Android, and serve as a lead product demonstrator at industry conferences, presenting live, high-stakes demos to clients and stakeholders.'
+            ]
+        },
+        {
+            title: 'Software Engineering Intern',
+            company: 'MapLarge',
+            location: 'Atlanta, GA (Remote)',
+            period: 'May 2025 -- Aug 2025',
+            description: [
+                'Developing scalable backend services in TypeScript to query and process large-scale geospatial datasets using SQL, powering dashboard visualizations.',
+                'Tasked with rebuilding legacy demo applications and implementing framework-specific modules (Angular, React, Vue, Python) to modernize internal displays.'
+            ]
+        },
+        {
+            title: 'Undergraduate Researcher',
+            company: 'George Mason University',
+            location: 'Fairfax, VA',
+            period: 'Sept 2024 -- Present',
+            description: [
+                'Analyzed government policies on AI dataset collection and apply data mining techniques to extract insights from over 9000 GitHub repositories.',
+                'Researched and promoted ethical, open-source data usage for national and local AI applications.'
+            ]
+        },
+        {
+            title: 'Undergraduate Teaching Assistant',
+            company: 'George Mason University',
+            location: 'Fairfax, VA',
+            period: 'Jan 2024 - May 2024, Jan 2025 - May 2025',
+            description: [
+                'Mentored 100+ students in core computer science concepts and authored 3 coding assignments on object-oriented programming used by the entire course.',
+                'Hosted office hours and review sessions, clarifying complex programming concepts such as polymorphism, inheritance, and recursion to students with diverse academic backgrounds.'
+            ]
+        },
+        {
+            title: 'Software Intern',
+            company: 'Techicon Inc.',
+            location: 'McLean, VA',
+            period: 'Mar 2022 -- Sept 2023',
+            description: [
+                'Resolved over 15 critical system bugs and executed comprehensive stress tests, improving application stability and performance under load.',
+                'Analyzed trends in government compliance software, presenting findings to the product team to inform design improvements and strategic direction.'
+            ]
+        }
+    ];
+
+    private projects: Project[] = [
+        {
+            title: 'StudyEZ',
+            description: 'Built a full-stack lecture assistant leveraging AssemblyAI and Gemini API to automate transcription, summarization, and resource discovery for uploaded media.',
+            technologies: ['React', 'Vite', 'MongoDB', 'Python', 'Flask', 'Gemini API'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/BITCAMP2025',
+            period: 'Spring 2025'
+        },
+        {
+            title: 'NASA Space Explorer',
+            description: 'Interactive web application showcasing NASA\'s Astronomy Picture of the Day (APOD) with advanced features including 3D tilt animations, modal previews, theme toggle, space facts, and smart API key management.',
+            technologies: ['JavaScript ES6+', 'CSS3 Animations', 'NASA APOD API', 'Web Share API', 'Local Storage'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/07-nasa-space-explorer',
+            period: 'Fall 2025'
+        },
+        {
+            title: 'Code Rush',
+            description: 'Crafted a gamified coding platform for real-time, competitive problem-solving to help users enhance coding skills and simulate technical interview scenarios.',
+            technologies: ['Java', 'JavaScript', 'SQL (MySQL)', 'React', 'Docker'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/CodeRush',
+            period: 'Fall 2024'
+        },
+        {
+            title: 'Fall Guys',
+            description: 'Developed an innovative fall detection system with a web-hosted front-end, integrating computer vision to analyze camera input and trigger automated emergency SMS alerts via Twilio.',
+            technologies: ['Python', 'OpenCV', 'MediaPipe', 'Twilio', 'React', 'Flask'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/HooHacks2024',
+            period: 'Spring 2024'
+        }
+    ];
+
+    private awards: Award[] = [
+        {
+            title: 'Web Development Certification',
+            organization: 'The Global Career Accelerator',
+            date: 'Jun 2025'
+        },
+        {
+            title: 'Outstanding Teaching Assistant Award',
+            organization: 'George Mason University',
+            date: 'May 2024'
+        }
+    ];
+
+    private skillCategories: SkillCategory[] = [
+        {
+            title: 'Programming Languages',
+            skills: ['Java', 'Python', 'C', 'JavaScript', 'TypeScript', 'Kotlin', 'HTML/CSS', 'LaTeX']
+        },
+        {
+            title: 'Databases',
+            skills: ['SQL (MySQL)', 'MongoDB']
+        },
+        {
+            title: 'Frameworks & Libraries',
+            skills: ['React', 'Flask', 'JUnit', 'pandas', 'NumPy', 'OpenCV', 'MediaPipe']
+        },
+        {
+            title: 'Developer Tools & Platforms',
+            skills: ['Git/GitHub', 'Docker', 'JIRA', 'Amazon Web Services (AWS)']
+        },
+        {
+            title: 'Spoken Languages',
+            skills: ['English (Native)', 'Urdu (Fluent)', 'Punjabi (Understanding)', 'Hindko (Understanding)', 'Pashto (Understanding)']
+        }
+    ];
+
+    constructor() {
+        this.init();
+    }
+
+    private init(): void {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.renderContactInfo();
+            this.renderSocialLinks();
+            this.renderEducation();
+            this.renderExperiences();
+            this.renderProjects();
+            this.renderAwards();
+            this.renderSkills();
+            this.setupScrollAnimations();
+            this.setupSmoothScrolling();
+        });
+    }
+
+    private renderContactInfo(): void {
+        const container = document.querySelector('.contact-info') as HTMLElement;
+        if (!container) return;
+
+        container.innerHTML = this.contactInfo.map(info => {
+            const content = `${info.icon} ${info.text}`;
+            return info.href 
+                ? `<a href="${info.href}" class="contact-item">${content}</a>`
+                : `<span class="contact-item">${content}</span>`;
+        }).join('');
+    }
+
+    private renderSocialLinks(): void {
+        const container = document.querySelector('.social-links') as HTMLElement;
+        if (!container) return;
+
+        const getIcon = (label: string) => {
+            if (label === 'LinkedIn') {
+                return `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>`;
+            } else if (label === 'GitHub') {
+                return `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>`;
+            }
+            return '';
+        };
+
+        container.innerHTML = this.socialLinks.map(link => 
+            `<a href="${link.href}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="${link.label}">
+                <span>${getIcon(link.label)}</span>
+            </a>`
+        ).join('');
+    }
+
+    private renderEducation(): void {
+        const container = document.querySelector('#education .container') as HTMLElement;
+        if (!container) return;
+
+        const educationHTML = `
+            <div class="card education-card fade-in">
+                <h3 class="card-title">${this.education.institution}</h3>
+                <div class="card-meta">${this.education.location} | ${this.education.period}</div>
+                <p><strong>${this.education.degree}</strong></p>
+                <div class="gpa"><strong>GPA:</strong> ${this.education.gpa}</div>
+                <div class="honors">
+                    <strong>Honors:</strong> ${this.education.honors.join(', ')}
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = educationHTML;
+    }
+
+    private renderExperiences(): void {
+        const container = document.querySelector('#experience .container') as HTMLElement;
+        if (!container) return;
+
+        const experiencesHTML = this.experiences.map(exp => `
+            <div class="card fade-in">
+                <h3 class="card-title">${exp.title}</h3>
+                <div class="card-meta">${exp.company} | ${exp.location} | ${exp.period}</div>
+                <div class="card-content">
+                    <ul>
+                        ${exp.description.map(desc => `<li>${desc}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `).join('');
+
+        container.innerHTML = experiencesHTML;
+    }
+
+    private renderProjects(): void {
+        const container = document.querySelector('.projects-grid') as HTMLElement;
+        if (!container) return;
+
+        const projectsHTML = this.projects.map(project => `
+            <div class="card project-card fade-in">
+                <h3 class="card-title">${project.title}</h3>
+                <div class="card-meta">${project.period}</div>
+                <p>${project.description}</p>
+                <div class="tech-stack">
+                    ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><span>� GitHub</span></a>` : ''}
+                    ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link"><span>� Live Demo</span></a>` : ''}
+                </div>
+            </div>
+        `).join('');
+
+        container.innerHTML = projectsHTML;
+    }
+
+    private renderAwards(): void {
+        const container = document.querySelector('#awards .container') as HTMLElement;
+        if (!container) return;
+
+        const awardsHTML = this.awards.map(award => `
+            <div class="card award-card fade-in">
+                <h3 class="card-title">${award.title}</h3>
+                <div class="card-meta">${award.organization} | ${award.date}</div>
+            </div>
+        `).join('');
+
+        container.innerHTML = awardsHTML;
+    }
+
+    private renderSkills(): void {
+        const container = document.querySelector('.skills-grid') as HTMLElement;
+        if (!container) return;
+
+        const skillsHTML = this.skillCategories.map(category => `
+            <div class="card skill-category fade-in">
+                <h3>${category.title}</h3>
+                <div class="skill-list">
+                    ${category.skills.map(skill => `<span class="skill-item"><span>${skill}</span></span>`).join('')}
+                </div>
+            </div>
+        `).join('');
+
+        container.innerHTML = skillsHTML;
+    }
+
+    private setupScrollAnimations(): void {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        setTimeout(() => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => observer.observe(el));
+        }, 100);
+    }
+
+    private setupSmoothScrolling(): void {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href') as string);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+}
+
+// Initialize the website
+new PersonalWebsite();
