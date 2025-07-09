@@ -18,7 +18,7 @@
   "author": "Abdullah Ali <abdullahmehdiemail@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.3"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,5 @@
   "homepage": "https://abdullah-mehdi.github.io/portfolio",
   "engines": {
     "node": ">=16.0.0"
-  }
-}devDependencies": {
-    "typescript": "^5.8.3"
   }
 }
