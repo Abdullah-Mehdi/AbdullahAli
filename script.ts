@@ -127,6 +127,20 @@ class PersonalWebsite {
 
     private projects: Project[] = [
         {
+            title: 'L\'Oreal Chatbot',
+            description: 'Production-ready AI beauty assistant with GPT-4o integration. Sophisticated beauty consultant using OpenAI GPT-4o with conversation context tracking, user profile persistence, modern chat interface with real-time bubbles, typing indicators, and authentic L\'Oréal branding.',
+            technologies: ['JavaScript ES6+', 'OpenAI GPT-4o', 'CloudFlare Workers', 'CSS3 Flexbox', 'HTML5', 'Local Storage API'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/L-Oreal-Chatbot',
+            period: 'Summer 2025'
+        },
+        {
+            title: 'Asterism - AniList Discord Bot',
+            description: 'Real-time AniList activity tracking Discord bot with 10+ concurrent active users. Monitors user anime/manga list updates every 5 minutes, posts rich embeds with cover images and metadata, and provides instant setup with slash commands.',
+            technologies: ['Node.js', 'Discord.js', 'AniList GraphQL API', 'JavaScript ES6+', 'RESTful APIs'],
+            githubUrl: 'https://github.com/Abdullah-Mehdi/Asterism',
+            period: 'Fall 2024'
+        },
+        {
             title: 'StudyEZ',
             description: 'Built a full-stack lecture assistant leveraging AssemblyAI and Gemini API to automate transcription, summarization, and resource discovery for uploaded media.',
             technologies: ['React', 'Vite', 'MongoDB', 'Python', 'Flask', 'Gemini API'],

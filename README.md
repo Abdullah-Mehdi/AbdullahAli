@@ -111,7 +111,7 @@ npm run dev
 - **Research**: Undergraduate Researcher focusing on AI ethics and governance
 - **Teaching**: Outstanding Teaching Assistant Award recipient
 - **Certification**: Web Development Certification from The Global Career Accelerator
-- **Projects**: Full-stack applications including NASA Space Explorer with advanced JavaScript features
+- **Projects**: Full-stack applications including L'Oreal AI Chatbot with GPT-4o, Asterism Discord Bot (10+ active users), NASA Space Explorer, StudyEZ, Code Rush, and Fall Guys
 - **Design**: Space-themed website with pastel purple and pixel art elements
 
 ## Contact Information
