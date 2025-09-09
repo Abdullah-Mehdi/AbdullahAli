@@ -242,6 +242,7 @@ class PersonalWebsite {
             this.renderSkills();
             this.setupScrollAnimations();
             this.setupSmoothScrolling();
+            this.setupResumeViewer();
         });
     }
 
@@ -404,6 +405,52 @@ class PersonalWebsite {
                     });
                 }
             });
+        });
+    }
+    
+    private setupResumeViewer(): void {
+        const viewResumeBtn = document.getElementById('viewResumeBtn');
+        const closeModalBtn = document.getElementById('closeModal');
+        const resumeModal = document.getElementById('resumeModal');
+        const resumeViewer = document.getElementById('resumeViewer') as HTMLIFrameElement;
+        
+        if (!viewResumeBtn || !closeModalBtn || !resumeModal || !resumeViewer) {
+            return;
+        }
+        
+        // Function to open the modal
+        const openModal = () => {
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Set the iframe source to the PDF
+            if (!resumeViewer.src) {
+                resumeViewer.src = 'Abdullah_Ali_Resume.pdf';
+            }
+        };
+        
+        // Function to close the modal
+        const closeModal = () => {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        
+        // Event listeners
+        viewResumeBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        // Close modal when clicking outside the modal content
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
+                closeModal();
+            }
         });
     }
 }

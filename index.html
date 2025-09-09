@@ -35,6 +35,7 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#awards" class="nav-link">Awards</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -122,6 +123,67 @@
             </div>
         </div>
     </section>
+
+    <!-- Resume Section -->
+    <section class="section fade-in" id="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-container fade-in">
+                <div class="resume-controls">
+                    <button class="btn btn-primary" id="viewResumeBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                        View Resume
+                    </button>
+                    <a href="Abdullah_Ali_Resume.pdf" download="Abdullah_Ali_Resume.pdf" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+                <div class="resume-preview fade-in">
+                    <div class="resume-preview-content">
+                        <h3>📄 Professional Resume</h3>
+                        <p>View my complete professional experience, education, projects, and skills in a beautiful, integrated viewer.</p>
+                        <ul class="resume-features">
+                            <li>✨ Interactive PDF viewer</li>
+                            <li>📱 Mobile-responsive design</li>
+                            <li>⚡ Instant download available</li>
+                            <li>🎯 Always up-to-date</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Abdullah Ali - Resume</h3>
+                <div class="modal-controls">
+                    <a href="Abdullah_Ali_Resume.pdf" download="Abdullah_Ali_Resume.pdf" class="btn btn-small">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        Download
+                    </a>
+                    <button class="btn btn-small" id="closeModal">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+                        </svg>
+                        Close
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe id="resumeViewer" title="Resume Viewer" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

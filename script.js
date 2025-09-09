@@ -186,6 +186,7 @@ class PersonalWebsite {
             this.renderSkills();
             this.setupScrollAnimations();
             this.setupSmoothScrolling();
+            this.setupResumeViewer();
         });
     }
     renderContactInfo() {
@@ -329,6 +330,38 @@ class PersonalWebsite {
                     });
                 }
             });
+        });
+    }
+    setupResumeViewer() {
+        const viewResumeBtn = document.getElementById('viewResumeBtn');
+        const closeModalBtn = document.getElementById('closeModal');
+        const resumeModal = document.getElementById('resumeModal');
+        const resumeViewer = document.getElementById('resumeViewer');
+        if (!viewResumeBtn || !closeModalBtn || !resumeModal || !resumeViewer) {
+            return;
+        }
+        const openModal = () => {
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (!resumeViewer.src) {
+                resumeViewer.src = 'Abdullah_Ali_Resume.pdf';
+            }
+        };
+        const closeModal = () => {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        viewResumeBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
+                closeModal();
+            }
         });
     }
 }

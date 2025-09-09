@@ -893,6 +893,223 @@ html {
     }
 }
 
+/* Resume Section */
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resume-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-family: 'Orbitron', var(--font-pixel);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: var(--pixel-shadow);
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--galaxy-blue), var(--primary-purple));
+    color: var(--cosmic-black);
+    border: 2px solid var(--primary-purple);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-purple), var(--pixel-shadow);
+    background: var(--primary-purple);
+}
+
+.btn-secondary {
+    background: rgba(45, 45, 63, 0.3);
+    color: var(--star-white);
+    border: 2px solid var(--cosmic-gray);
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-cyan);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+.resume-preview {
+    background: var(--cosmic-gradient);
+    border: 2px solid var(--primary-purple);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--space-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url('Abdullah_Ali_Resume.pdf') center/contain no-repeat;
+    opacity: 0.1;
+    filter: blur(3px);
+    mask-image: linear-gradient(to left, rgba(0,0,0,1), transparent);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), transparent);
+}
+
+.resume-preview-content {
+    position: relative;
+    z-index: 1;
+}
+
+.resume-preview h3 {
+    font-family: 'Orbitron', var(--font-pixel);
+    margin-bottom: 1.5rem;
+    color: var(--primary-purple);
+    font-size: 1.8rem;
+}
+
+.resume-features {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.resume-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.9);
+    z-index: 1001;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    height: 90%;
+    margin: 2% auto;
+    background: var(--cosmic-gradient);
+    border: 2px solid var(--primary-purple);
+    border-radius: var(--border-radius);
+    box-shadow: var(--glow-purple), var(--space-shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--primary-purple);
+    background: var(--space-navy);
+}
+
+.modal-header h3 {
+    font-family: 'Orbitron', var(--font-pixel);
+    color: var(--primary-purple);
+    margin: 0;
+}
+
+.modal-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#resumeViewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+
+/* Show modal with .active class */
+.modal.active {
+    display: block;
+}
+
+/* Media queries for Resume section */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .resume-controls {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        width: 95%;
+        height: 95%;
+        margin: 2.5% auto;
+    }
+    
+    .modal-header {
+        padding: 0.8rem 1rem;
+    }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
